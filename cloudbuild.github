@@ -7,7 +7,7 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/hello-node']
   # Deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'hello-node', '--image', 'gcr.io/$PROJECT_ID/hello-node:0.2', '--platform', 'managed', '--region', 'us-central1', '--quiet']
+  args: ['beta', 'run', 'deploy', 'hello-node', '--image', 'gcr.io/$PROJECT_ID/hello-node', '--platform', 'managed', '--region', 'us-central1', '--quiet']
 images:
 - 'gcr.io/$PROJECT_ID/hello-node'
 timeout: "600s"
